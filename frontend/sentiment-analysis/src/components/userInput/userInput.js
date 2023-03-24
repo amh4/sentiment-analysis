@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import SentimentGauge from "../sentimentGauge/sentimentGauge";
 
 const UserInput = () => {
   const [userSentence, setUserSentence] = useState();
+  const [sentenceScore, setSentenceScore] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -11,8 +13,10 @@ const UserInput = () => {
       "http://127.0.0.1:5000/get_sentiment/" + encodeURIComponent(userSentence)
     )
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => setSentenceScore(data.compound))
       .catch((error) => console.log(error));
+
+    console.log(sentenceScore);
   };
 
   return (
@@ -25,6 +29,7 @@ const UserInput = () => {
         />
         <button type="submit">Submit</button>
       </form>
+      <SentimentGauge sentenceScore={sentenceScore} />
     </div>
   );
 };
