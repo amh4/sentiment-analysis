@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState} from "react";
+import GaugeChart from 'react-gauge-chart';
 
 const SentimentGauge = ({ sentenceScore }) => {
+
   return (
     <div>
-      <p>{sentenceScore}</p>
+      <GaugeChart id='gauge-chart1'
+      nrOfLevels={20}
+      percent={sentenceScore}/>
     </div>
   );
 };
