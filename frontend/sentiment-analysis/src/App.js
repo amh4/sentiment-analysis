@@ -5,6 +5,7 @@ import UserInput from "./components/userInput/userInput";
 function App() {
   return (
     <div className="App">
+      <img src='sent-ence-iment-logo.png' alt="logo"/>
       <UserInput />
     </div>
   );
