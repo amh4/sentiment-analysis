@@ -10,4 +10,12 @@ describe("UserInput component", () => {
     cy.mount(<UserInput/>);
     cy.get('#gauge-chart1').should('be.visible')
   })
+
+  it("should take in user input and render relevant components", () => {
+    cy.mount(<UserInput/>);
+    cy.get('#input-field').click();
+    cy.get('#input-field').type('I am happy');
+    cy.get('button').click();
+    cy.get('form').submit();
+  })
 })
