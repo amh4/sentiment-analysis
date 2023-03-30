@@ -3,6 +3,13 @@
   background-color: #003366;
 }
 
+.sent-ence-iment-logo {
+  width: 60%;
+  justify-items: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
