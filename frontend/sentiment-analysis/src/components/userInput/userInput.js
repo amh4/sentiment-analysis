@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SentimentGauge from "../sentimentGauge/sentimentGauge";
+import './userInput.css'
 import Error from "../error/error";
 
 const UserInput = () => {
@@ -21,10 +22,10 @@ const UserInput = () => {
   };
 
   return (
-    <div className="user-input-form">
-      <form onSubmit={handleSubmit}>
+    <div className="user-input">
+      <form className="user-input-form" onSubmit={handleSubmit}>
         <input type="text" id="input-field" placeholder="Enter a sentence"/>
-        <button type="submit">Submit</button>
+        <button className="user-submit-button" type="submit">Submit</button>
       </form>
       {error && <Error errorMessage={error} />}
       {!error && <SentimentGauge sentenceScore={sentenceScore} />}
