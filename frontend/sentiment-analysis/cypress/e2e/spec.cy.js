@@ -10,25 +10,22 @@ describe('User Input Form', () => {
 
     cy.get('#gauge-chart1').should('exist');
   });
+
+  it('displays error message when server returns error', () => {
+    cy.visit('http://localhost:3000'); // replace with the URL of your app
+
+    cy.intercept('GET', 'http://127.0.0.1:5000/get_sentiment/*', {
+      statusCode: 500,
+      body: 'Internal Server Error',
+    });
+
+    cy.get('#input-field')
+      .type('This is a test sentence') // replace with your own test sentence
+      .should('have.value', 'This is a test sentence');
+
+    cy.get('button[type="submit"]').click();
+
+    cy.get('.error-message').should('be.visible');
+    cy.get('.error-message').should('contain', 'Sorry something went wrong, please try again');
+  });
 });
-
-// Test mocking a failure to see if the error message comes up
-// describe('User Input Form', () => {
-//   it('displays error message when server returns error', () => {
-//     cy.visit('http://localhost:3000'); // replace with the URL of your app
-
-//     cy.intercept('GET', 'http://127.0.0.1:5000/get_sentiment/*', {
-//       statusCode: 500,
-//       body: 'Internal Server Error',
-//     });
-
-//     cy.get('#input-field')
-//       .type('This is a test sentence') // replace with your own test sentence
-//       .should('have.value', 'This is a test sentence');
-
-//     cy.get('button[type="submit"]').click();
-
-//     cy.get('.error-message').should('be.visible');
-//     cy.get('.error-message').should('contain', 'Sorry, something went wrong.');
-//   });
-// });
