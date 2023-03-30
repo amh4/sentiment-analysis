@@ -9,3 +9,7 @@
 <br>
 Now sent-ence-iment will be running in your local host. 
 
+## Testing
+
+### Frontend
+The frontend testing uses the Cypress testing suite. To run the Cypress tests, navigate into frontend > senitment-analysis > run `npx cypress open` and follow instructions from there.
