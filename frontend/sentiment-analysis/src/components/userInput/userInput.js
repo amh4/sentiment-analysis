@@ -3,6 +3,7 @@ import SentimentGauge from "../sentimentGauge/sentimentGauge";
 
 const UserInput = () => {
   const [sentenceScore, setSentenceScore] = useState(0);
+  const [error, setError] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,7 +14,7 @@ const UserInput = () => {
     )
       .then((response) => response.json())
       .then((data) => setSentenceScore(data.compound))
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error));
   };
 
   return (
