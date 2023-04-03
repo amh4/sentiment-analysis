@@ -7,7 +7,10 @@ import json
 nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
 if not os.path.exists(nltk_data_dir):
     os.makedirs(nltk_data_dir)
-nltk.download('vader_lexicon', download_dir=nltk_data_dir)
+
+if not os.path.exists(os.path.join(nltk_data_dir, 'vader_lexicon')):
+    nltk.download('vader_lexicon', download_dir=nltk_data_dir)
+
 os.environ['NLTK_DATA'] = nltk_data_dir
 
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
