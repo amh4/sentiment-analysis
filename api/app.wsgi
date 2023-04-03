@@ -2,7 +2,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-from ./lib/get_sentiment import get_sentiment
+from lib.get_sentiment import get_sentiment
 
 def application(environ, start_response):
     if environ['PATH_INFO'] == '/get_sentiment/':
