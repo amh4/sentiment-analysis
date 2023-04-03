@@ -4,7 +4,7 @@ import os
 import sys
 import json
 
-nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk_data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'nltk_data'))
 if not os.path.exists(nltk_data_dir):
     os.makedirs(nltk_data_dir)
 
