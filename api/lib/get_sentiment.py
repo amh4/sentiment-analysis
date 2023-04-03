@@ -7,7 +7,7 @@ from flask_cors import CORS
 nltk.download('vader_lexicon')
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000'])
+CORS(app, origins=['https://sentiment-analysis-three.vercel.app/'])
 
 @app.route('/get_sentiment/<string:sentence>')
 def get_sentiment(sentence):
