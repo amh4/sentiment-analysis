@@ -1,5 +1,5 @@
 * {
-  background-color: #003366
+  background-color: #003366;
 }
 
 .App {
@@ -8,10 +8,10 @@
 }
 
 .sent-ence-iment-logo {
-  width: 60%;
+  width: 50%;
   justify-items: center;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .intro-text {
@@ -23,7 +23,7 @@
   width: 65%;
   color: #f5f5f5;
   padding-bottom: 3%;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .App-logo {
@@ -65,10 +65,24 @@
   .intro-text {
     font-size: 14px;
   }
+
+  .sent-ence-iment-logo {
+    width: 80%;
+    justify-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .intro-text {
     font-size: 10px;
+  }
+
+  .sent-ence-iment-logo {
+    width: 80%;
+    justify-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
   }
 }
