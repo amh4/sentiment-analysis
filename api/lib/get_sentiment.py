@@ -1,10 +1,13 @@
 from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
 import json
+import os
 from flask import Flask
 from flask_cors import CORS
 
-nltk.download('vader_lexicon')
+nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.download('vader_lexicon', download_dir=nltk_data_dir)
+os.environ['NLTK_DATA'] = nltk_data_dir
 
 app = Flask(__name__)
 CORS(app, origins=['https://sentiment-analysis-three.vercel.app/'])
