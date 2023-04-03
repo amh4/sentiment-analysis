@@ -1,19 +1,24 @@
 import os
 import sys
+import json
 
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 from lib.get_sentiment import get_sentiment
 
 def application(environ, start_response):
-    if environ['PATH_INFO'] == '/get_sentiment/':
-        start_response('404 NOT FOUND', [('Content-Type', 'text/plain')])
-        return [b'Page not found.']
+    if environ['REQUEST_METHOD'] != 'GET':
+        start_response('405 METHOD NOT ALLOWED', [('Content-Type', 'text/plain')])
+        return [b'Method not allowed.']
+    elif environ['PATH_INFO'] == '/get_sentiment/':
+        start_response('400 BAD REQUEST', [('Content-Type', 'text/plain')])
+        return [b'Missing sentence parameter.']
     elif environ['PATH_INFO'].startswith('/get_sentiment/'):
         sentence = environ['PATH_INFO'][15:]
         status = '200 OK'
         headers = [('Content-type', 'application/json')]
+        response = {'sentence': sentence, 'sentiment': get_sentiment(sentence)}
         start_response(status, headers)
-        return [get_sentiment(sentence.encode('utf-8')).encode('utf-8')]
+        return [json.dumps(response).encode('utf-8')]
     else:
         start_response('404 NOT FOUND', [('Content-Type', 'text/plain')])
         return [b'Page not found.']

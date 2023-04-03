@@ -4,7 +4,7 @@ import json
 from flask import Flask
 from flask_cors import CORS
 
-
+nltk.download('vader_lexicon')
 
 app = Flask(__name__)
 CORS(app, origins=['https://sentiment-analysis-three.vercel.app/'])
