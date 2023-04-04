@@ -12,7 +12,7 @@ const UserInput = () => {
     const userInput = document.getElementById("input-field").value;
 
     fetch(
-      "https://sentiment-analysis-backend.onrender.com/get_sentiment/" +
+      "https://sentiment-analysis-backend-cors.onrender.com/get_sentiment/" +
         encodeURIComponent(userInput)
     )
       .then((response) => response.json())
