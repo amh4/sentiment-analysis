@@ -1,15 +1,13 @@
-# sentiment-analysis
+# Sent-ence-iment
 
-## To Run
+A natural language processing app that can gauge the positivity/negativity of a phrase provided by the user.
 
-* Start by cloning this repository
-* In the root file run `pipenv shell`
-* Navigate to api > lib and run `python3 get_sentiment.py`
-* In another terminal navigate to frontend > sentiment-analysis > run `npm start`
-<br>
-Now sent-ence-iment will be running in your local host. 
+The frontend is built using Javascript and React, which is deployed on Vercel. With the backend being built in Python and Flask, which is deployed on Render.
 
-## Testing
+![](./images/demo.gif)
 
-### Frontend
-The frontend testing uses the Cypress testing suite. To run the Cypress tests, navigate into frontend > senitment-analysis > run `npx cypress open` and follow instructions from there.
+## Planning
+
+The programme started as a high level idea where we wanted to use Natural Language Processing to analyse user input.
+
+After our initial research there were a few primary hurdles we had to overcome such as learning Python and test driving Python, integrating a JS frontend and Python Backend and from a users perspective how to we display the mathmatical output in an easy to understand format.
