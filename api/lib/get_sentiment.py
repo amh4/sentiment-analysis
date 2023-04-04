@@ -13,7 +13,8 @@ def get_sentiment(sentence):
   sia = SentimentIntensityAnalyzer()
   scores = sia.polarity_scores(sentence)
   print(json.dumps(scores))
-  return json.dumps(scores)
+  return json.dumps(scores), 200, {'Access-Control-Allow-Origin': 'https://sentiment-analysis-three.vercel.app'}
+
 
 if __name__ == '__main__':
     app.run(debug=True)
