@@ -6,7 +6,7 @@ from flask import Flask
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=['https://sentiment-analysis-three.vercel.app/'])
+# CORS(app, origins=['https://sentiment-analysis-three.vercel.app/'])
 
 @app.route('/get_sentiment/<string:sentence>')
 def get_sentiment(sentence):
