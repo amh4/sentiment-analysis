@@ -4,6 +4,31 @@ A natural language processing app that can gauge the positivity/negativity of a 
 
 The frontend is built using Javascript and React, which is deployed on Vercel. With the backend being built in Python and Flask, which is deployed on Render.
 
+## Contents
+
+- [Technologies](#technologies)
+- [Mobile Demo](#mobile-demo)
+- [Desktop Demo](#desktop-demo)
+- [Planning](#planning)
+- [Technologies Research](#technologies-research)
+- [Our MVP](#our-mvp)
+- [Sprint Planning](#sprint-planning)
+- [Features](#features)
+- [Frontend Testing](#frontend-testing)
+- [Backend Testing](#backend-testing)
+- [Running The Application](#running-the-application)
+- [Future Actions](#future-actions)
+
+## Technologies
+
+<div align="center">
+	<code><img height="45" src="https://user-images.githubusercontent.com/25181517/192107854-765620d7-f909-4953-a6da-36e1ef69eea6.png" alt="HTTP" title="HTTP" /></code>
+	<code><img height="45" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript" /></code>
+	<code><img height="45" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React" /></code>
+	<code><img height="45" src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python" title="Python" /></code>
+	<code><img height="45" src="https://user-images.githubusercontent.com/25181517/183423775-2276e25d-d43d-4e58-890b-edbc88e915f7.png" alt="Flask" title="Flask" /></code>
+</div>
+
 ## Mobile Demo
 
 ![](./images/mobile-demo-gif.gif)
@@ -77,3 +102,10 @@ Alternatively, to run locally:
 4. Navigate into the lib file and run 'python3 get_sentiment.py'
 5. In a new terminal window navigate into the frontend and run 'npm install' to install the Javascript modules required.
 6. Then, in your terminal, enter 'npm start' and the app will launch in the browser.
+
+## Future Actions
+
+- Allow the user to upload documents for analysis
+- Create user profiles
+- User can view previous searches
+- Integration with twitter api to analyse tweets
