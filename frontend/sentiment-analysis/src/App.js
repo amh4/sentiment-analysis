@@ -15,8 +15,10 @@ function App() {
         Sent-Ence-Iment!
         <br />
         <br />
-        Please note that as this runs on a free Render Server your first
-        response may take a brief period to load as the server starts up.
+        <b>
+          Please note that as this runs on a free Render Server your first
+          response may take a brief period to load as the server starts up.
+        </b>
         <br />
         Enter your sentence, click Submit, and Sent-Ence-Iment will rate your
         attitude.
